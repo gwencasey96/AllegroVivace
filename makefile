@@ -1,10 +1,8 @@
 CC=gcc 
-CFLAGS= -g #debug info for hello.c -Wall #with all errors
+CFLAGS= -g -Wall  #debug info for hello.c #with all errors
 
-hello: hello.o
-	$(cc) hello.o -o hello
+hello: hello.c
+	$(cc) hello.c -o hello $(pkg-config allegro-5 allegro_font-5 --libs --cflags)
 
-hello.o: hello.c
-	$(cc) -c hello.c
-
-clean: rm*.o hello
+clean:
+	rm *.o hello
