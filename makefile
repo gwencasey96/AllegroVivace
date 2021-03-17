@@ -7,3 +7,8 @@ hello: hello.c
 .PHONY: clean 
 clean:
 	rm -f hello
+
+help:
+	@echo ' clean -remove source files'
+	@echo ' hello -compile source files'
+	@ech  ' help  -lists targets       '
