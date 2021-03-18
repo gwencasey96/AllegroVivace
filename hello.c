@@ -1,11 +1,10 @@
 #include <allegro5/allegro5.h>
 #include <allegro5/allegro_font.h>
 #include <stdbool.h>
+#include <util.c>
 
 int main()
 {
-    al_init();
-    al_install_keyboard();
 
     ALLEGRO_TIMER* timer = al_create_timer(1.0 / 30.0);
     ALLEGRO_EVENT_QUEUE* queue = al_create_event_queue();
@@ -43,6 +42,7 @@ int main()
     al_destroy_display(disp);
     al_destroy_timer(timer);
     al_destroy_event_queue(queue);
+    startup();
 
     return 0;
 }
