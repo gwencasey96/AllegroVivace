@@ -2,6 +2,7 @@
 #include <allegro5/allegro_font.h>
 #include <stdbool.h>
 #include <util.c>
+#include "util.h"
 
 int main()
 {
@@ -10,6 +11,7 @@ int main()
     ALLEGRO_EVENT_QUEUE* queue = al_create_event_queue();
     ALLEGRO_DISPLAY* disp = al_create_display(320, 200);
     ALLEGRO_FONT* font = al_create_builtin_font();
+    
 
     al_register_event_source(queue, al_get_keyboard_event_source());
     al_register_event_source(queue, al_get_display_event_source(disp));
